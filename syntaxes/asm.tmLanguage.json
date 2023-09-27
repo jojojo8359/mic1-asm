@@ -6,26 +6,52 @@
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#constant"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#functions"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.asm",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.asm",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.asm",
-					"match": "\\\\."
+					"name": "keyword.directive.asm",
+					"match": "\\.(loc|LOC)"
+				},
+				{
+					"name": "keyword.instruction.asm",
+					"match": "(lodd|LODD|stod|STOD|addd|ADDD|subd|SUBD|jpos|JPOS|jzer|JZER|jump|JUMP|loco|LOCO|lodl|LODL|stol|STOL|addl|ADDL|subl|SUBL|jneg|JNEG|jnze|JNZE|call|CALL|pshi|PSHI|popi|POPI|push|PUSH|pop|POP|retn|RETN|swap|SWAP|insp|INSP|desp|DESP|halt|HALT)\\s"
 				}
 			]
+		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric.hex.asm",
+					"match": "//$-??(0x|0X)[a-fA-F\\d]+"
+				},
+				{
+					"name": "constant.numeric.dec.asm",
+					"match": "\\$-??\\d+"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line",
+				"begin": ";",
+				"end": "\n"
+			}]
+		},
+		"functions": {
+			"patterns": [{
+				"name": "entity.name.function.label.asm",
+				"match": "[\\w_]+\\:"
+			}]
 		}
 	},
 	"scopeName": "source.asm"

@@ -1,6 +1,6 @@
 # mic1-asm README
 
-This is the README for your extension "mic1-asm". After writing up a brief description, we recommend including the following sections.
+Language extension for the MIC1 assembly language
 
 ## Features
 
