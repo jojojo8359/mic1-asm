@@ -1,0 +1,25 @@
+{
+  "name": "mic1-asm",
+  "displayName": "mic1-asm",
+  "description": "Syntax highlighting for MIC1 assembly language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.82.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "asm",
+      "aliases": ["MIC1 Assembly", "asm"],
+      "extensions": [".asm"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "asm",
+      "scopeName": "source.asm",
+      "path": "./syntaxes/asm.tmLanguage.json"
+    }]
+  }
+}
