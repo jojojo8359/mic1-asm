@@ -49,7 +49,7 @@
   "devDependencies": {
     "@types/node": "^20.7.0",
     "@vscode/vsce": "^2.21.0",
-    "esbuild": "^0.19.3"
+    "esbuild": "^0.25.0"
   },
   "activationEvents": [
     "onLanguage:asm"
